@@ -1,0 +1,135 @@
+.platforms-container {
+  background: white;
+  border-radius: 6px;
+  padding: 22px;
+  margin-bottom: 24px;
+  border: 1px solid #e8e8e8;
+}
+
+.platforms-header {
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 14px;
+}
+
+.platforms-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.platforms-stats {
+  display: flex;
+  gap: 12px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.stat-box.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.stat-box.inactive {
+  background: #e2e3e5;
+  color: #666;
+}
+
+.stat-box.total {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.stat-box .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.stat-box .number {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.platforms-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1rem;
+}
+
+.loading {
+  color: #1976d2;
+}
+
+.error {
+  color: #e74c3c;
+  background: #fee;
+  border-radius: 8px;
+  border-left: 4px solid #e74c3c;
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .platforms-container {
+    padding: 16px;
+  }
+
+  .platforms-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .platforms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .platforms-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
